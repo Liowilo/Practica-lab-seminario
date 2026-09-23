@@ -9,7 +9,6 @@
 
 <!-- Usen la notación de guias/notacion.md. Una tabla por renglón. -->
 
-```
 PLAN(**id_plan**, nombre, costo_mensual)
 SOCIO(**num_socio**, nombre, fecha_nacimiento, correo, id_plan → PLAN)
 SOCIO_TELEFONO(**num_socio** → SOCIO, **telefono**)
@@ -18,7 +17,6 @@ INSTRUCTOR(**num_empleado**, nombre, especialidad, num_empleado_supervisor? → 
 CLASE(**id_clase**, nombre, cupo_max, num_empleado → INSTRUCTOR)
 SESION(**id_clase** → CLASE, **numero_sesion**, fecha, hora_inicio, salon)
 INSCRIPCION(**num_socio** → SOCIO, **id_clase** → CLASE, **fecha_inscripcion**, estatus)
-```
 
 ## Diagrama (opcional)
 
@@ -86,4 +84,4 @@ erDiagram
         date fecha_inscripcion PK
         string estatus
     }
-    ```
+```
