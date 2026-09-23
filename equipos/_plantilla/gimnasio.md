@@ -1,9 +1,9 @@
 # Equipo XX — Caso Gimnasio
 
 **Integrantes:**
--Bribiesca Bernal Kevin Axel
--Garcia Gracia David Emanuel 
--Rico Calzadilla Rodrigo
+-
+-
+-
 
 ## Esquema relacional
 

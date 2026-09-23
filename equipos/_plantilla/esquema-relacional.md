@@ -3,9 +3,9 @@
 **Dominio de negocio:**
 
 **Integrantes:**
--Bribiesca Bernal Kevin Axel
--Garcia Garcia David Emanuel
--Rico Calzadilla Rodrigo
+-
+-
+-
 
 **Enlace al diagrama E/R del jueves 17** (dbdiagram.io, Mermaid o archivo en el repositorio del proyecto):
 
