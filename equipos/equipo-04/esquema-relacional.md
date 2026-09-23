@@ -1,4 +1,4 @@
-# Equipo XX — Esquema relacional del proyecto
+# Equipo 04 — Esquema relacional del proyecto
 
 **Dominio de negocio:**
 
