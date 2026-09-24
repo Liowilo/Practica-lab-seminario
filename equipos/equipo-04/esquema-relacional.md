@@ -13,20 +13,17 @@
 
 ## 1. Esquema relacional
 
-<!-- Transformen su E/R completo con la notación de guias/notacion.md.
-     Todas las tablas, todas las PK, todas las FK y el ? donde corresponda. -->
-
-```
-
-```
+PELICULA(**id_pelicula**, titulo, duracion, clasificacion)
+SALA(**num_sala**, capacidad, tipo_pantalla)
+FUNCION(**id_funcion**, fecha, hora, num_sala → SALA, id_pelicula → PELICULA)
+CLIENTE(**id_cliente**, nombre, correo UNIQUE)
+BOLETO(**id_boleto**, id_funcion → FUNCION, id_cliente → CLIENTE?, asiento, precio)
 
 ## 2. Relaciones N:M y cómo las resolvieron
 
-<!-- Una fila por cada relación N:M de su E/R. -->
-
 | Relación en el E/R | Tabla intermedia | Llave primaria de la tabla intermedia | ¿Se puede repetir la misma pareja? ¿Por qué? |
 |---|---|---|---|
-| | | | |
+| CLIENTE y FUNCION | BOLETO | **id_boleto** (artificial) | Sí. Un mismo cliente puede comprar varios boletos para la misma función (por ejemplo, si va con su familia y compra 4 entradas). Como usamos un `id_boleto` artificial, la pareja `(id_cliente, id_funcion)` se puede repetir sin causar error de llave duplicada. |
 
 ## 3. Relaciones 1:1, recursivas, débiles y multivaluados
 
