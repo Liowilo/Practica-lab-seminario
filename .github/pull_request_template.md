@@ -1,8 +1,8 @@
 ## Equipo
 
-- **Número de equipo:**
-- **Dominio de negocio:**
-- **Integrantes (usuario de GitHub):** @ , @ , @
+- **Número de equipo:**Equipo-04
+- **Dominio de negocio:**Cine
+- **Integrantes (usuario de GitHub):** @Latracalosa77 , @djevghg0231217-beep , @neo24r
 
 ## Qué contiene este Pull Request
 
