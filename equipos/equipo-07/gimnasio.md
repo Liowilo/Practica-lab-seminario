@@ -10,13 +10,20 @@
 <!-- Usen la notación de guias/notacion.md. Una tabla por renglón. -->
 
 ```
-MEMBRESIA(**id_membresia**, tipo, costo_mensual, duracion_meses, descripcion?, activa)
+PLAN(**id_plan**, nombre, costo_mensual)
 
-SOCIO(**num_socio**, nombre, apellidos, fecha_nacimiento, correo, telefono, id_membresia → MEMBRESIA, fecha_registro)
+LOCKER(**num_locker**, ubicacion)
 
-PAGO(**id_pago**, num_socio → SOCIO, id_membresia → MEMBRESIA, fecha_pago, monto, metodo_pago, estatus_pago, referencia_pago?)
+SOCIO(**num_socio**, nombre, apellidos, fecha_nacimiento, correo, id_plan → PLAN, num_locker? UNIQUE → LOCKER)
 
-INSTRUCTOR(**num_empleado**, nombre, apellidos, especialidad, telefono, correo, fecha_contratacion)
-## Diagrama (opcional)
+SOCIO_TELEFONO(**num_socio** → SOCIO, **telefono**)
+
+INSTRUCTOR(**num_empleado**, nombre, apellidos, especialidad, num_supervisor? → INSTRUCTOR)
+
+CLASE(**id_clase**, nombre, cupo_max, num_empleado → INSTRUCTOR)
+
+SESION(**id_clase** → CLASE, **numero_sesion**, fecha, hora_inicio, salon)
+
+INSCRIPCION(**num_socio** → SOCIO, **id_clase** → CLASE, **fecha_inscripcion**, estatus)
 
 <!-- Si quieren, dibujen aquí el esquema en Mermaid. -->
