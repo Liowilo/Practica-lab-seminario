@@ -1,13 +1,13 @@
 # Equipo 04 — Esquema relacional del proyecto
 
-**Dominio de negocio:**
+**Dominio de negocio:** Cine
 
 **Integrantes:**
 -Bribiesca Bernal Kevin Axel
 -Garcia Garcia David Emanuel
 -Rico Calzadilla Rodrigo
 
-**Enlace al diagrama E/R del jueves 17** (dbdiagram.io, Mermaid o archivo en el repositorio del proyecto):
+**Enlace al diagrama E/R del jueves 17** (https://dbdiagram.io/d/6aac1c78b73118d200b0a46d ):
 
 ---
 
