@@ -1,7 +1,7 @@
-# Equipo XX — Caso Gimnasio
+# Equipo 07 — Caso Gimnasio
 
 **Integrantes:**
-- Natalia Godinez
+-Natalia Godinez Alavez 
 -Paulina Monserrat Meraz Alcantara
 -Jesus Diaz Hernandez 
 
@@ -10,23 +10,13 @@
 <!-- Usen la notación de guias/notacion.md. Una tabla por renglón. -->
 
 ```
-PLAN(**id_plan**, nombre, costo_mensual)
+MEMBRESIA(**id_membresia**, tipo, costo_mensual, duracion_meses, descripcion?, activa)
 
-LOCKER(**num_locker**, ubicacion)
+SOCIO(**num_socio**, nombre, apellidos, fecha_nacimiento, correo, telefono, id_membresia → MEMBRESIA, fecha_registro)
 
-SOCIO(**num_socio**, nombre, fecha_nacimiento, correo, id_plan → PLAN, num_locker? UNIQUE → LOCKER)
+PAGO(**id_pago**, num_socio → SOCIO, id_membresia → MEMBRESIA, fecha_pago, monto, metodo_pago, estatus_pago, referencia_pago?)
 
-SOCIO_TELEFONO(**num_socio** → SOCIO, **telefono**)
-
-INSTRUCTOR(**num_empleado**, nombre, especialidad, num_supervisor? → INSTRUCTOR)
-
-CLASE(**id_clase**, nombre, cupo_max, num_empleado → INSTRUCTOR)
-
-SESION(**id_clase** → CLASE, **numero_sesion**, fecha, hora_inicio, salon)
-
-INSCRIPCION(**num_socio** → SOCIO, **id_clase** → CLASE, **fecha_inscripcion**, estatus)
-```
-
+INSTRUCTOR(**num_empleado**, nombre, apellidos, especialidad, telefono, correo, fecha_contratacion)
 ## Diagrama (opcional)
 
 <!-- Si quieren, dibujen aquí el esquema en Mermaid. -->
