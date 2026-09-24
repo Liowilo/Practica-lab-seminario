@@ -42,10 +42,11 @@ BOLETO(**id_boleto**, id_funcion → FUNCION, id_cliente → CLIENTE?, asiento, 
 
 | Tabla.columna | Por qué puede quedar vacía |
 |---|---|
-| | |
+|`BOLETO.id_cliente` | Permite registrar ventas de boletos en taquilla física a clientes generales o anónimos que no cuentan con un perfil o registro previo en el sistema de la base de datos (compras rápidas en efectivo o ventas de última hora). |
 
 ## 5. Cambios respecto del E/R del jueves
-
+* **Creación de llave artificial:** Se decidió utilizar `id_boleto` como clave primaria artificial en la tabla de asociación `BOLETO`, lo que facilita el manejo independiente de cada entrada adquirida.
+* **Participación opcional (Nullable FK):** Al pasar al esquema relacional, se ajustó el campo `id_cliente` en la tabla `BOLETO` para que acepte valores `NULL`, permitiendo modelar las compras de taquilla para clientes no registrados (público general).
 <!-- Al pasar a tablas casi siempre aparece algo que el E/R no dejaba ver.
      Si cambiaron algo del diagrama, díganlo aquí. Si no cambiaron nada, escriban "Ninguno". -->
 
