@@ -45,3 +45,13 @@ CREATE TABLE detalle_pedido (
     precio_unitario NUMERIC(10,2) NOT NULL,
     PRIMARY KEY (id_pedido, id_producto)
 );
+
+CREATE TABLE pago (
+    id_pago INTEGER PRIMARY KEY,
+    id_pedido INTEGER NOT NULL
+        REFERENCES pedido(id_pedido),
+    fecha_pago DATE NOT NULL,
+    monto NUMERIC(10,2) NOT NULL,
+    metodo_pago VARCHAR(50) NOT NULL,
+    estado VARCHAR(30) NOT NULL
+);
